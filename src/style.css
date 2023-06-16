@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.349), rgba(1, 0, 0, 0.6)), url("../images/pills2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
+
+/* submenu navbar */
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#cssmenu {
+    width: 15%;
+    height: 100vh;
+    background-color: #222222;
+    position: fixed;
+    z-index: 1;
+    font-family: Raleway, sans-serif;
+    color: #ffffff;
+}
+
+#cssmenu ul ul {
+    display: none;
+}
+
+#cssmenu>ul>li.active>ul {
+    display: block;
+}
+
+.align-right {
+    float: right;
+}
+
+#cssmenu>ul>li>a {
+    padding: 16px 22px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #222222;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+#cssmenu>ul>li>a:hover {
+    color: #d8f3f0;
+}
+
+#cssmenu ul>li.has-sub>a:after {
+    position: absolute;
+    right: 26px;
+    top: 19px;
+    z-index: 5;
+    display: block;
+    height: 10px;
+    width: 2px;
+    background: #ffffff;
+    content: "";
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+#cssmenu ul>li.has-sub>a:before {
+    position: absolute;
+    right: 22px;
+    top: 23px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #ffffff;
+    content: "";
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -ms-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}
+
+#cssmenu ul>li.has-sub.open>a:after,
+#cssmenu ul>li.has-sub.open>a:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#cssmenu ul ul li a {
+    padding: 14px 22px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 14px;
+    text-decoration: none;
+    color: #dddddd;
+    background: #49505a;
+    -webkit-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+#cssmenu ul ul ul li a {
+    padding-left: 32px;
+}
+
+#cssmenu ul ul li a:hover {
+    color: #ffffff;
+}
+
+#cssmenu ul ul>li.has-sub>a:after {
+    top: 16px;
+    right: 26px;
+    background: #dddddd;
+}
+
+#cssmenu ul ul>li.has-sub>a:before {
+    top: 20px;
+    background: #dddddd;
+}
+
+.logo .logo-caption {
+    font-family: 'Poiret One', cursive;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo .profile {
+    margin-left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%);
+}
+
+.logo .tweak {
+    color: #ff5252;
+    font-weight: bold;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
+    #cssmenu {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    #cssmenu ul {
+        display: none;
+    }
+
+    #cssmenu ul li {
+        width: 100%;
+        float: none;
+    }
+
+    #cssmenu ul li a {
+        padding: 16px 22px;
+        font-size: 16px;
+    }
+
+    #cssmenu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    #cssmenu ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    #cssmenu ul ul li a {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+
+    #cssmenu ul ul ul li a {
+        padding-left: 30px;
+    }
+
+    #cssmenu ul li.has-sub>a:after,
+    #cssmenu ul li.has-sub>a:before {
+        display: none;
+    }
+
+    #cssmenu ul li.has-sub.open>ul {
+        max-height: none;
+    }
+}
+
+
+/* Hamburger menu styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    #cssmenu {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    #cssmenu ul {
+        display: none;
+    }
+
+    #cssmenu ul li {
+        width: 100%;
+        float: none;
+    }
+
+    .menu-icon {
+        display: block;
+        padding: 16px;
+        background-color: #222222;
+        color: #ffffff;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 2px;
+        width: 25px;
+        background-color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+    .menu ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu li.has-sub>a:after,
+    .menu li.has-sub>a:before {
+        display: none;
+    }
+
+    .menu li.has-sub>ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .menu ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .menu ul li a {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+
+    .menu ul ul li a {
+        padding-left: 30px;
+    }
+}
